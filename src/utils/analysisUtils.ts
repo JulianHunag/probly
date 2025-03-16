@@ -3,6 +3,10 @@ import { OpenAI } from "openai";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || "",
+  baseURL: "https://openrouter.ai/api/v1",
+  defaultHeaders: {
+    "X-Title": process.env.OPENROUTER_TITLE || "Spreadsheet Analyzer" // Your app name
+  }
 });
 
 /**
@@ -88,7 +92,7 @@ export async function structureAnalysisOutput(rawOutput: string, analysisGoal: s
   ];
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-4o",
+    model: "openai/gpt-4o",
     messages,
     temperature: 0.1,
   });
