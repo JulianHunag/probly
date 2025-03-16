@@ -33,7 +33,7 @@ This guide will help you get up and running with Probly, the AI-powered spreadsh
    npm run dev
    ```
 
-5. Open your browser and navigate to `http://localhost:3000`
+5. Open your browser and navigate to `http://localhost:30018`
 
 ## Basic Usage
 

@@ -51,11 +51,11 @@ COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
 
 # Set environment variables with runtime defaults
-ENV PORT 3000
+ENV PORT 30018
 ENV HOSTNAME "0.0.0.0"
 
 # Expose the port the app will run on
-EXPOSE 3000
+EXPOSE 30018
 
 # Start the application
 CMD ["node", "server.js"]

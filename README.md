@@ -50,7 +50,7 @@ The easiest way to get started with Probly is using Docker:
    docker compose up -d
    ```
 
-4. Access Probly at http://localhost:3000
+4. Access Probly at http://localhost:30018
 
 The Docker container serves the Next.js application and handles API requests to OpenAI, while all Python code execution happens in your browser using WebAssembly.
 
@@ -119,7 +119,7 @@ To build a custom Docker image with your API key baked in:
 
 ```bash
 docker build -t probly:custom --build-arg OPENAI_API_KEY=your_api_key_here .
-docker run -p 3000:3000 probly:custom
+docker run -p 30018:30018 probly:custom
 ```
 
 ## Tech Stack
