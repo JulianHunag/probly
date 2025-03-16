@@ -16,9 +16,13 @@ import { tools } from "@/constants/tools";
 dotenv.config();
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || "",
+  apiKey: process.env.OPENROUTER_API_KEY || "",
+  baseURL: "https://openrouter.ai/api/v1",
+  defaultHeaders: {
+    "X-Title": process.env.OPENROUTER_TITLE || "Spreadsheet Analyzer" // Your app name
+  }
 });
-const model = "gpt-4o";
+const model = "openai/gpt-4o";
 
 async function handleLLMRequest(
   message: string,
